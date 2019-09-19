@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="d">
+    <script>
+        var d=document.getElementById('d');
+        var nw=confirm('女王请点确定');
+       // console.log(nw);
+        d.oninput=function(){
+            // d.value == '2019-03-09'   返回值   对   错
+            //true/false             true/false
+            d.value=='2019-03-08' && nw ? alert('5折') : alert('不打折');      
+        }
+    </script>
+</body>
+</html>
