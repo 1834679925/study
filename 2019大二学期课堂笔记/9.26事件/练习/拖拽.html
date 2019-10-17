@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            position: relative;
+        }
+       div{
+           width: 100px;
+           height: 100px;
+           background-color:red;
+           position: absolute;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+     </style>
+</head>
+<body>
+    <div id="mydiv">
+        <img src="1.jpg" alt="">
+    </div>
+     <script>
+                var mydiv = document.getElementById('mydiv');
+        mydiv.onmousedown = function(e){
+            var ev = e || window.event;
+            var xcha = ev.clientX - mydiv.offsetLeft;
+            var ycha = ev.clientY - mydiv.offsetTop;
+            document.onmousemove = function(e){
+                var ev = e || window.event;
+                mydiv.style.left = ev.clientX-xcha + 'px';
+                mydiv.style.top = ev.clientY-ycha + 'px';
+            }
+            document.onmouseup = function(){
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+            //取消冒泡
+            return false;
+        }
+
+     </script>
+</body>
+</html>

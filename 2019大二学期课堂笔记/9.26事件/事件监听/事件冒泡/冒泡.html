@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        #a{
+          width: 300px;
+          height: 300xp;
+          background-color: blue;
+          margin: 200px auto；
+        }
+        #b{
+          width: 200px;
+          height: 200xp;
+          background-color: yellow;
+        }
+        #b{
+          width: 100px;
+          height: 100xp;
+          background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div id="b">
+            <div id="c"></div>
+        </div>
+    </div>
+    <script>
+        var a=document.getElementById('a');
+        var b=document.getElementById('b');
+        var c=document.getElementById('c');
+        a.onmouseenter=function(){
+            alert('a');
+        }
+        b.onmouseenter=function(){
+            alert('b');
+        }
+        c.onmouseenter=function(){
+            alert('c');
+        }
+    </script>
+</body>
+</html>

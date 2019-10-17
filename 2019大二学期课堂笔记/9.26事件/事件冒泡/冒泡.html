@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <style>
+         body{
+             background-color: gray;
+         }
+        #a{
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            background-color: blue;
+        }
+        #b{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        #c{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+     </style>
+</head>
+<body>
+    <div id="a">
+        <div id="b">
+           <div id="c"></div>
+        </div>
+    </div>
+     <script>
+         var a=document.getElementById('a');
+         a.onmouseenter=function(){
+            alert('a');
+         }
+         b.onmouseenter=function(){
+            alert('b');
+         }
+         c.onmouseenter=function(){
+            alert('c');
+         }
+     </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <style>
+       div{
+            width:200px;
+            height:200px;
+            display: inline-block;
+        }
+       img{
+           width: 100px;
+           height: 100px;
+           float: left;
+           padding: 50px;
+       }
+     </style>
+</head>
+<body>
+    <div id="mydiv1">
+        <img src="1.jpg" alt="">
+    </div>
+    <div id='mydiv2'>
+        <img src="2.jpg" alt="">
+    </div>
+     <script>
+         var mydiv1=document.getElementById('mydiv1');
+         var mydiv2=document.getElementById('mydiv2');
+         mydiv1.addEventListener('dblclick',c,false);
+         mydiv2.addEventListener('dblclick',d,false);
+         mydiv1.addEventListener('click',a,false);
+         mydiv2.addEventListener('click',a,false);
+         function a(){
+            this.style.backgroundColor = 'gray';
+        }
+        function c(){
+            mydiv1.style.backgroundColor = '';
+            alert('欢迎使用qq');
+        }
+        function d(){
+            mydiv2.style.backgroundColor = '';
+            alert('欢迎使用微信');
+        }
+
+        
+     </script>
+</body>
+</html>
